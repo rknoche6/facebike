@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Header from "..components/Header";
+import Header from "../components/Header";
+
 
 export default function Home() {
   return (
     <div>
-      <Head>
+      <Head className="h-screen">
         <title>Facebike</title>
 
       </Head>
