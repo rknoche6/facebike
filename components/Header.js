@@ -2,6 +2,10 @@ import Image from "next/image";
 import {
     SearchIcon,
     HomeIcon,
+    ChatIcon,
+    ViewGridIcon,
+    BellIcon,
+    ChevronDownIcon
 } from "@heroicons/react/solid";
 import {
     FlagIcon,
@@ -9,10 +13,12 @@ import {
     ShoppingCartIcon,
     UserGroupIcon
 } from "@heroicons/react/outline";
-import HeaderIconStyle from "./HeaderIconStyle";
+import HeaderIconStyle from "./MiddleHeaderIcon";
+import RightHeaderIcon from "./RightHeaderIcon";
 function Header() {
     return (
-        <div className="flex">   
+        <div className="flex shadow-md">   
+            {/* Left side of header */}
             <div className="flex items-center">
                 <Image 
                     src="https://www.seekpng.com/png/detail/280-2802791_moran-facebook-link-facebook-logo-black.png"
@@ -27,6 +33,8 @@ function Header() {
                 </div>
             </div>
 
+            {/* Middle side of header */}
+
             <div className="flex justify-center flex-grow">
                 <div className="flex space-x-6 md:space-x-2">
                 <HeaderIconStyle Icon={HomeIcon} />
@@ -35,7 +43,17 @@ function Header() {
                 <HeaderIconStyle Icon={ShoppingCartIcon} />
                 <HeaderIconStyle Icon={UserGroupIcon} />
                 </div>
-          </div>
+            </div>
+            {/* Right side of header */}
+            <div className="flex items-center justify-end">
+                <p>Richard Knoche</p>
+                <div className="flex space-x-1 ">
+                    <RightHeaderIcon Icon={ViewGridIcon} />
+                    <RightHeaderIcon Icon={ChatIcon} />
+                    <RightHeaderIcon Icon={BellIcon} />
+                    <RightHeaderIcon Icon={ChevronDownIcon} />
+                </div>
+            </div>
         </div> 
     )
 }
